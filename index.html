@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>Magic 8 Ball</title>
+</head>
+<style>
+    body {text-align: center;
+    background-color: blue;}
+    h1 {text-align: center;}
+    p {color: red; font-size: 30px;}
+    
+</style>
+
+<body>
+    <img src="https://www.bing.com/th?id=OIP.gLDOz3QsvN9grgzpK92fUAHaHa&w=85&h=88&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+    <h1>Magic 8 Ball</h1>
+    <p>Bring questions for I have the answers</p>
+    <input id="userinput" type="input" required=""/>
+    <input id="button" type="button" value="submit" onclick="response();"/>
+    <p id="response"></p>
+    <script>
+        function response() {
+            var list = [
+            "It is certain",
+            "It is decidedly so",
+            "Without a doubt",
+            "Yes, definitely",
+            "You may rely on it",
+            "As I see it, yes",
+            "Most likely",
+            "Outlook good",
+            "Yes",
+            "Signs point to yes"
+            ];
+            var number = Math.floor(Math.random()*10);
+            document.getElementById("response").innerHTML = list[number];}
+    </script>
+<h2>Coin Flip?</h2>
+    <input id="button" type="button" value="check response quality" onclick="advice();"/>
+    <p id = "advice"></p>
+    <script>
+         function advice() {
+            var list = [
+           "that is great advice",
+           "that is balogna"];
+        //    "No way of knowing for sure"];
+            var number = Math.floor(Math.random()*2);
+            document.getElementById("advice").innerHTML = list[number];}
+    </script>
+</body>
+</html>
